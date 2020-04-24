@@ -1,2 +1,34 @@
 <!DOCTYPE html>
 
+<html>
+	<head>
+		<link rel="stylesheet" href="stylelogin.css">
+		<title>Login Page</title>
+	</head>
+	<body>
+
+	<div class="containerbig">
+        <h2 >Log in</h2>
+
+	<div class="container">
+		<form action="/action_page.php" method="post">
+
+    			<label for="uname"><b>Username</b></label>
+    			<input type="text" placeholder="Enter Username" name="uname" required>
+
+    			<label for="psw"><b>Password</b></label>
+    			<input type="password" placeholder="Enter Password" name="psw" required>
+        
+    			<button onclick="document.location = 'homememorypage.htm'" type="submit">Login</button>
+
+  	</div>
+
+  	<div class="container" style="background-color:#f1f1f1">
+    		<button type="button" onclick="document.location = 'homememorypage.htm'" class="cancelbtn">Cancel</button>
+  	</div>
+ 	</div> 
+	</form>
+	</body>
+
+</html>
+
