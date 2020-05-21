@@ -37,3 +37,103 @@ html {
 .main {
   margin-top: 30px; /* Add a top margin to avoid content overlay */
 }
+
+button {
+    border: none;
+    cursor: pointer;
+    padding: 10px 18px;
+    font-size: 40px;
+    font-family:"Arial";
+
+}
+
+.journal_container {
+ position: relative;
+  text-align:left;
+  background-color: white;
+  margin-left:400px;
+  height: 600px;
+  margin-right:400px;
+  margin-top:100px;
+}
+
+p {
+ padding-top:10px;
+ padding-left:10px;
+ font-family: "Arial";
+ font-size:40px;
+ color: #DDD6F3;
+
+}
+
+
+/*Code for pop up box
+
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  padding-left:50px;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+  padding-left: 50px;
+}
+
+.select-selected {
+  background-color: #13547a;
+  padding-left:50px;
+
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+
+  color: #402929;
+  padding-left:50px;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  padding-left:50px;
+  background-color: #13547a;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding-left:50px;
+
+}
