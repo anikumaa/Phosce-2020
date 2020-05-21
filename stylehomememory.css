@@ -49,7 +49,7 @@ button {
 
 .journal_container {
  position: relative;
-  text-align:left;
+  text-align:center;
   background-color: white;
   margin-left:400px;
   height: 600px;
@@ -57,34 +57,43 @@ button {
   margin-top:100px;
 }
 
-p {
- padding-top:10px;
+h1 {
+ padding-top:50px;
  padding-left:10px;
- font-family: "Arial";
+ font-family: "Verdana Bold";
  font-size:40px;
  color: #DDD6F3;
 
 }
 
+p {
+  color: #DDD6F3;
+  font-size:20px;
+  font-family: "Verdana";
+}
 
-/*Code for pop up box
 
+.pledge{
+  color:white;
+  margin-bottom:500px;
+  margin-top:150px;
+  background-color: #DDD6F3;
+
+}
 /* The container must be positioned relative: */
 .custom-select {
   position: relative;
-  padding-left:50px;
+  padding-left:110px;
+  margin-top:50px;
   font-family: Arial;
 }
 
 .custom-select select {
   display: none; /*hide original SELECT element: */
-  padding-left: 50px;
 }
 
 .select-selected {
-  background-color: #13547a;
-  padding-left:50px;
-
+  background-color: #DDD6F3;
 }
 
 /* Style the arrow inside the select element: */
@@ -107,9 +116,7 @@ p {
 
 /* style the items (options), including the selected item: */
 .select-items div,.select-selected {
-
-  color: #402929;
-  padding-left:50px;
+  color: #ffffff;
   padding: 8px 16px;
   border: 1px solid transparent;
   border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
@@ -119,8 +126,8 @@ p {
 /* Style items (options): */
 .select-items {
   position: absolute;
+  background-color: #DDD6F3;
   padding-left:50px;
-  background-color: #13547a;
   top: 100%;
   left: 0;
   right: 0;
@@ -134,6 +141,8 @@ p {
 
 .select-items div:hover, .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
-  padding-left:50px;
-
 }
+
+/*Text box*/
+
+
