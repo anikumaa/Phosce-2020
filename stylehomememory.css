@@ -127,11 +127,16 @@ p {
 .select-items {
   position: absolute;
   background-color: #DDD6F3;
-  padding-left:50px;
+  padding-left:110px;
+
   top: 100%;
   left: 0;
   right: 0;
   z-index: 99;
+}
+
+img {
+position:center;
 }
 
 /* Hide the items when the select box is closed: */
