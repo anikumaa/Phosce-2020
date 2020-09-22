@@ -26,7 +26,9 @@
     						<option value="3">Doodle</option>
 						<option value="4">Photo</option>
   					</select>
-			</div>
+      </div>
+      <br>
+      <textarea id = "txt1" class = "txt" style = "Display: none;"></textarea>
 			</form>
 			<br><br>
 
@@ -79,6 +81,8 @@ for (i = 0; i < x.length; i++) {
   }
   x[i].appendChild(b);
   a.addEventListener("click", function(e) {
+    curr_field = a.innerHTML;
+    openfield()
     /* When the select box is clicked, close any other select boxes,
     and open/close the current select box: */
     e.stopPropagation();
@@ -87,7 +91,16 @@ for (i = 0; i < x.length; i++) {
     this.classList.toggle("select-arrow-active");
   });
 }
-
+function openfield(){
+  if(curr_field == "Text"){
+    txt = document.getElementById("txt1");
+    txt.setAttribute("style", "Display:block")
+  }
+  else{
+    txt = document.getElementById("txt1");
+    txt.setAttribute("style", "Display:none")
+  }
+}
 function closeAllSelect(elmnt) {
   /* A function that will close all select boxes in the document,
   except the current select box: */
