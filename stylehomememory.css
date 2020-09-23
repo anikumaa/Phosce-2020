@@ -76,14 +76,15 @@ p {
 .pledge{
   color:white;
   margin-bottom:500px;
-  margin-top:150px;
+  margin-top:100px;
   background-color: #DDD6F3;
 
 }
 /* The container must be positioned relative: */
 .custom-select {
   position: relative;
-  padding-left:110px;
+  padding-left:0px;
+  margin: auto;
   margin-top:50px;
   font-family: Arial;
 }
@@ -127,7 +128,7 @@ p {
 .select-items {
   position: absolute;
   background-color: #DDD6F3;
-  padding-left:110px;
+  padding-left:0px;
 
   top: 100%;
   left: 0;
@@ -138,7 +139,14 @@ p {
 img {
 position:center;
 }
-
+.txt{
+  margin:auto;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 300px;
+  height: 100px;
+}
 /* Hide the items when the select box is closed: */
 .select-hide {
   display: none;
