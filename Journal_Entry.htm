@@ -29,6 +29,11 @@
       </div>
       <br>
       <textarea id = "txt1" class = "txt" style = "Display: none;"></textarea>
+      <label id = "file-select" class = "file-select" style="Display: none;">
+        <input id = "no"  type = "file" style = "Display:none;"></input>
+        Custom Upload
+    </label>
+      
 			</form>
 			<br><br>
 
@@ -38,6 +43,8 @@
 
 		</div>
 
+
+    
 			<script>
 		var x, i, j, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */
@@ -96,11 +103,20 @@ function openfield(){
     txt = document.getElementById("txt1");
     txt.setAttribute("style", "Display:block")
   }
-  else{
+  else if(curr_field != "Text"){
     txt = document.getElementById("txt1");
     txt.setAttribute("style", "Display:none")
   }
+  if(curr_field == "Photo" || curr_field == "Audio"){
+    Photo = document.getElementById("file-select");
+    Photo.setAttribute("style", "Display:block")
+  }
+  else if(curr_field != "Photo" || curr_field != "Audio"){
+    Photo = document.getElementById("file-select");
+    Photo.setAttribute("style", "Display:none")
+  }
 }
+
 function closeAllSelect(elmnt) {
   /* A function that will close all select boxes in the document,
   except the current select box: */
