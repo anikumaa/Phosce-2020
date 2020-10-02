@@ -7,24 +7,26 @@
 	</head>
 	<body>
 
-	<div class="containerbig">
-        <h2 >Log in</h2>
+	<div class="containerbig" style = "border-radius: 5px;">
+        <h2 style = "font-family: Arial, Helvetica, sans-serif;">Log in</h2>
 
 	<div class="container">
-		<form action="/action_page.php" method="post">
+		<form action="/action_page.php" method="post" style = "font-family: Arial, Helvetica, sans-serif;">
 
     			<label for="uname"><b>Username</b></label>
-    			<input type="text" placeholder="Enter Username" name="uname" required>
+    			<input type="text" style = "border-radius: 3px;"placeholder="Enter Username" name="uname" required>
 
     			<label for="psw"><b>Password</b></label>
-    			<input type="password" placeholder="Enter Password" name="psw" required>
+				<input type="password"style = "border-radius: 3px;" placeholder="Enter Password" name="psw" required>
+				
+				
         
-    			<button onclick="document.location = 'homememorypage.htm'" type="submit">Login</button>
+    			<button  style = "border-radius: 5px;" onclick="document.location = 'homememorypage.htm'" type="submit">Login</button>
 
   	</div>
 
-  	<div class="container" style="background-color:#f1f1f1">
-    		<button type="button" onclick="document.location = 'geninfo.htm'" class="cancelbtn">Cancel</button>
+  	<div  style = "border-radius: 5px;" class="container" style="background-color:#d6d4d4">
+    		<button style = "border-radius: 5px;" type="button" onclick="document.location = 'geninfo.htm'" class="cancelbtn">Cancel</button>
   	</div>
  	</div> 
 	</form>
