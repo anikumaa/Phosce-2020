@@ -80,6 +80,9 @@ p {
   background-color: #DDD6F3;
 
 }
+.pledge:hover{
+  color: rgb(139, 138, 138);
+}
 /* The container must be positioned relative: */
 .custom-select {
   position: relative;
@@ -146,6 +149,7 @@ position:center;
   font-family: Arial, Helvetica, sans-serif;
   width: 300px;
   height: 100px;
+  resize: none;
 }
 .file-select{
   margin: auto;
