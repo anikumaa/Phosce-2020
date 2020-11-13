@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 
 <html>
 	<head>
@@ -14,11 +14,11 @@
   			<a href="Journal_Entry.htm">Journal</a>
 			<a href="homememorypage.htm">Memories</a>
 		</div>
-		<div class = "journal_container"  style = "border-radius: 5px;"> 
+		<div class = "journal_container"  style = "border-radius: 5px;">
       <h1>Journal Prompt of the Day</h1>
-      
+
       <p id="prompt" >What is something you feel grateful for today?</p>
-      
+
 			<form action="/action_page.php">
 				<div class="custom-select" style="width:400px;">
   				<select>
@@ -32,7 +32,7 @@
       <br>
       How was your day?<br>
       <div>
-        
+
         <span id = "1" style = "color:black; cursor: pointer;" onclick="one()">  <i class="material-icons">star</i></i></span>&nbsp;
         <span id = "2" style = "color:black; cursor: pointer;" onclick="two()">  <i class="material-icons">star</i></i></span>&nbsp;
         <span id = "3" style = "color:black; cursor: pointer;" onclick="three()"><i class="material-icons">star</i></i></span>&nbsp;
@@ -46,18 +46,15 @@
         <input id = "no"  type = "file" style = "Display:none;"></input>
         Custom File Upload
     </label>
-      
 			</form>
 			<br><br>
 
-			
-			<button id="myBtn"  style = "border-radius: 5px;" class ="pledge"> Submit</button>
-	
+
+			<button id="myBtn" class ="pledge"> Submit</button>
+
 
 		</div>
 
-
-    
 			<script>
 		var x, i, j, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */
@@ -101,7 +98,6 @@ for (i = 0; i < x.length; i++) {
   }
   x[i].appendChild(b);
   a.addEventListener("click", function(e) {
-    //the variable cur_field is just a simple stored variable of the current field.
     curr_field = a.innerHTML;
     openfield()
     /* When the select box is clicked, close any other select boxes,
@@ -112,27 +108,16 @@ for (i = 0; i < x.length; i++) {
     this.classList.toggle("select-arrow-active");
   });
 }
-
-//this function will open the needed fields from the selected type
 function openfield(){
   if(curr_field == "Text"){
     txt = document.getElementById("txt1");
     txt.setAttribute("style", "Display:block")
   }
-  else if(curr_field != "Text"){
+  else{
     txt = document.getElementById("txt1");
     txt.setAttribute("style", "Display:none")
   }
-  if(curr_field == "Photo" || curr_field == "Audio"){
-    Photo = document.getElementById("file-select");
-    Photo.setAttribute("style", "Display:block")
-  }
-  else if(curr_field != "Photo" || curr_field != "Audio"){
-    Photo = document.getElementById("file-select");
-    Photo.setAttribute("style", "Display:none")
-  }
 }
-
 function closeAllSelect(elmnt) {
   /* A function that will close all select boxes in the document,
   except the current select box: */
@@ -162,5 +147,5 @@ document.addEventListener("click", closeAllSelect);
 
 
 	</body>
-	
+
 </html>
