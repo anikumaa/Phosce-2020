@@ -4,7 +4,7 @@
 	<head>
 		<link rel="stylesheet" href="stylehomememory.css">
 		<title>Journal?</title>
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	</head>
 
 	<body>
@@ -18,7 +18,7 @@
       <h1>Journal Prompt of the Day</h1>
       
       <p id="prompt" >What is something you feel grateful for today?</p>
-      <!--<script src = "RandomJournalPrompt.js"></script>-->
+      
 			<form action="/action_page.php">
 				<div class="custom-select" style="width:400px;">
   				<select>
@@ -31,9 +31,16 @@
       </div>
       <br>
       How was your day?<br>
-      <input type="radio" id="scales" name="scales">Good</input>
-      <input type="radio" id="scales" name="scales">Ok</input>
-      <input type="radio" id="scales" name="scales">Bad</input>
+      <div>
+        
+        <span id = "1" style = "color:black;" onclick="one()">  <i class="material-icons">star</i></i></span>&nbsp;
+        <span id = "2" style = "color:black;" onclick="two()">  <i class="material-icons">star</i></i></span>&nbsp;
+        <span id = "3" style = "color:black;" onclick="three()"><i class="material-icons">star</i></i></span>&nbsp;
+        <span id = "4" style = "color:black;" onclick="four()"> <i class="material-icons">star</i></i></span>&nbsp;
+        <span id = "5" style = "color:black;" onclick="five()"> <i class="material-icons">star</i></i></span>&nbsp;
+        <p style = "color: black;">You rated your day:<span id = "value">0</span> Stars</p>
+      <script src = "star.js"></script>
+      </div>
       <textarea id = "txt1" class = "txt" style = "Display: none;" placeholder="Enter your entry here"></textarea>
       <label id = "file-select" class = "file-select" style="Display: none;">
         <input id = "no"  type = "file" style = "Display:none;"></input>
