@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href = "sty.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script>
+$(function() {
+  function checkLength(o, min, max) {
+    if (o.val().length > max || o.val().length < min) {
+      o.addClass("ui-state-error");
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  function addEvent(d) {
+    var valid = true;
+    $("#newEvent input").removeClass("ui-state-error");
+    valid = valid && checkLength($("#newEventTitle"), 3, 80);
+    if (valid) {
+      $.ajax({
+        url: "newEvent.php",
+        type: "POST",
+        data: {
+          eventName: $("#newEventTitle").val(),
+          eventDate: d,
+          eventTime: $("#newEventTime").val(),
+          eventDesc: $("#newEventDesc").val(),
+          eventColor: $("#newEventTeam").val()
+        },
+        success: function(resp) {
+          // Response may contain an Event ID that could be added to the calendar
+          $(".selected-day").removeClass("selected-day");
+        }
+      });
+    }
+    return valid;
+  }
+
+  var $popup = $("#newEvent").dialog({
+    autoOpen: false,
+    modal: true,
+    buttons: {
+      "Create Event": function() {
+        addEvent($(".selected-day").html());
+      },
+      Cancel: function() {
+        $(this).dialog("close");
+      }
+    },
+    close: function() {
+      $("#newEvent form")[0].reset();
+      $("#newEvent form input").removeClass("ui-state-error");
+      $(this).dialog("option", "title", "New Event");
+    }
+  });
+
+  $("#newEvent form").submit(function(e) {
+    e.preventDefault();
+    addUser($(".selected-day").html());
+  });
+
+  $("#cal-frame td").click(function(e) {
+    var day = parseInt($(this).html());
+    $(this).addClass("selected-day");
+    var month = $("#cal .month-year").html();
+    var title = $popup.dialog("option", "title") + " for " + day + month;
+    $popup.dialog("option", "title", title);
+    $popup.dialog("open");
+  });
+});
+</script>
+</head>
+<body>
+
+<div id="cal">
+  <div class="header">
+    <span class="left button" id="prev"> &lang; </span>
+    <span class="left hook"></span>
+    <span class="month-year" id="label"> January 2017 </span>
+    <span class="right hook"></span>
+    <span class="right button" id="next"> &rang; </span>
+  </div>
+  <table id="days">
+    <td>sun</td>
+    <td>mon</td>
+    <td>tue</td>
+    <td>wed</td>
+    <td>thu</td>
+    <td>fri</td>
+    <td>sat</td>
+  </table>
+  <div id="cal-frame">
+    <table class="curr">
+      <tbody>
+        <tr>
+          <td class="today">1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>16</td>
+          <td>17</td>
+          <td>18</td>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>23</td>
+          <td>24</td>
+          <td>25</td>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+        </tr>
+        <tr>
+          <td>29</td>
+          <td>30</td>
+          <td>31</td>
+          <td class="nil"></td>
+          <td class="nil"></td>
+          <td class="nil"></td>
+          <td class="nil"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div id="newEvent" title="New Event">
+  <form>
+    <label for="newEventTitle">Event Title</label>
+    <input type="text" id="newEventTitle" class="text ui-widget-content ui-corner-all" />
+    <label for="newEventTime">Event Time</label>
+    <input type="text" id="newEventTime" class="text ui-widget-content ui-corner-all" />
+    <label for="newEventDesc">Event Description</label>
+    <input type="text" id="newEventDesc" class="text ui-widget-content ui-corner-all" />
+    <label for="newEventTeam">Team</label>
+    <input type="text" id="newEventTeam" class="text ui-widget-content ui-corner-all" />
+    <!-- Allow form submission with keyboard without duplicating the dialog button -->
+    <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+  </form>
+</div>
+</body>
+</html>
