@@ -4,7 +4,11 @@ html {
     background-attachment: fixed;
     background-size: 100% 100%;
   }
-
+.white{
+  background-color: #ffffff;
+  width:100px;
+  height:50px;
+}
   /* The navigation bar */
 .navbar {
   overflow: hidden;
