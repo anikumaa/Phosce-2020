@@ -1,13 +1,15 @@
 html {
-    background-image: linear-gradient(to top, #FFF7B9, #FFE6FB, #DDD6F3 );
+    /*background-image: linear-gradient(to bottom, #9e74c6, #FFE6FB, #FFF7B9);*/
+    background-color: #cfbbe2ff;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
   }
 .white{
-  background-color: #ffffff;
-  width:100px;
-  height:50px;
+  font-size:100px;
+ margin-top:-10px;
+  color: #ffffff;
+  float: left;
 }
   /* The navigation bar */
 .navbar {
@@ -71,13 +73,23 @@ button {
 h1 {
  padding-top:50px;
  padding-left:10px;
- font-family: "Verdana Bold";
+ font-family: "Verdana";
  font-size:40px;
  color: #DDD6F3;
 
 }
+grid-containter{
+padding-top:-10px;
+}
+h2 {
+ text-align:center; 
+font-size: 100px;
+ color: #ffffff;
+ font-family:"Verdana";
+}
 
 p {
+  text-align:center;
   color: #DDD6F3;
   font-size:20px;
   font-family: "Verdana";
@@ -188,8 +200,6 @@ position:center;
 
 /*Text box*/
 
-
-
 .grid-container {
   display: grid;
   grid-column-gap: 20px;
@@ -198,7 +208,6 @@ position:center;
   padding: 10px;
   left: 50%;
   border-radius: 25px;
-  margin-top: 10%;
 }
 .grid-item {
   background-color: #DDD6F3;
@@ -235,7 +244,8 @@ position:center;
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
+  margin-top:-10px;
+  color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -243,7 +253,19 @@ position:center;
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.entry{
+  text-align: center;
+}
+
+.modal-header{
+color: #b79dd0;
+ font-size:20px;
+ text-align: center;
+ font-family: "Verdana";
+
 }
