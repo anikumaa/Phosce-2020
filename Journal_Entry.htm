@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 	<head>
@@ -46,18 +46,20 @@
         <input id = "no"  type = "file" style = "Display:none;"></input>
         Custom File Upload
     </label>
+
 			</form>
 			<br><br>
-
-
-			<button id="myBtn" class ="pledge"> Submit</button>
 
 			<!--<textarea id = "txt1" class = "txt" style = "Display: none;"></textarea>
 			</form>
 			<button id="myBtn" class ="pledge"> Submit</button>-->
 
+			<button id="myBtn"  style = "border-radius: 5px;" class ="pledge"> Submit</button>
+
 
 		</div>
+
+
 
 			<script>
 		var x, i, j, selElmnt, a, b, c;
@@ -102,6 +104,7 @@ for (i = 0; i < x.length; i++) {
   }
   x[i].appendChild(b);
   a.addEventListener("click", function(e) {
+    //the variable cur_field is just a simple stored variable of the current field.
     curr_field = a.innerHTML;
     openfield()
     /* When the select box is clicked, close any other select boxes,
@@ -112,16 +115,27 @@ for (i = 0; i < x.length; i++) {
     this.classList.toggle("select-arrow-active");
   });
 }
+
+//this function will open the needed fields from the selected type
 function openfield(){
   if(curr_field == "Text"){
     txt = document.getElementById("txt1");
     txt.setAttribute("style", "Display:block")
   }
-  else{
+  else if(curr_field != "Text"){
     txt = document.getElementById("txt1");
     txt.setAttribute("style", "Display:none")
   }
+  if(curr_field == "Photo" || curr_field == "Audio"){
+    Photo = document.getElementById("file-select");
+    Photo.setAttribute("style", "Display:block")
+  }
+  else if(curr_field != "Photo" || curr_field != "Audio"){
+    Photo = document.getElementById("file-select");
+    Photo.setAttribute("style", "Display:none")
+  }
 }
+
 function closeAllSelect(elmnt) {
   /* A function that will close all select boxes in the document,
   except the current select box: */
