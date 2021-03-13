@@ -37,7 +37,7 @@
 }
 
 html {
-    background-image: linear-gradient(to top, #FFF7B9, #FFE6FB, #DDD6F3 );
+    background-color: #cfbbe2ff;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -100,7 +100,7 @@ button {
 h1 {
  padding-top:50px;
  padding-left:10px;
- font-family: "Verdana Bold";
+ font-family: "Verdana";
  font-size:40px;
  color: #DDD6F3;
 
