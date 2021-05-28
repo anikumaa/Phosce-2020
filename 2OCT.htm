@@ -26,11 +26,10 @@
   <div class="week-day">Saturday</div>  
 </div>
 
-<body onload = "positiondate()">
 <div class="grid-container">
 
   <!-- Trigger the modal with a button -->
-  <button type="button" class="grid-item" data-toggle="modal" id="firstday" data-target="#2_2_2021"><img src = "whitemail.png"></button>
+  <button type="button" class="grid-item" data-toggle="modal" id="firstsat" data-target="#2_2_2021"><img src = "whitemail.png"></button>
 
   <!-- Modal -->
   <div class="modal fade" id="2_2_2021" role="dialog">
@@ -218,12 +217,13 @@
 </div>
  <div></div>
 <script>
-
-function positiondate()
-{
-document.getElementById("firstday").id="firstmon";
-}
-</script>
-
+        var el_up = document.getElementById('GFG_UP');
+        el_up.innerHTML = "Click on button to "
+                        + "change the ID of box.";
+                          
+        function GFG_Fun() {
+            document.getElementById('div').id = 'div2';
+        }
+    </script>
 </html>
 

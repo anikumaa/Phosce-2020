@@ -190,6 +190,7 @@ position:center;
   border-radius: 25px;
   margin-top: 10%;
 }
+.grid-column {}
 .grid-item {
   background-color: #DDD6F3;
   padding: 10px;
@@ -198,7 +199,9 @@ position:center;
   font-color: white;
   height: 50px;
   border-radius: 10px;
+  grid-column: 1/7;
 }
+
 
 .modal {
   display: none; /* Hidden by default */

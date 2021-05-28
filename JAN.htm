@@ -16,10 +16,11 @@
                 </div>
 <button class="white" onclick="location.href='months.htm'" type="button">&larr;</button>
 <h2>January</h2>
+
 <div class="grid-container">
   
 <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#2_1_2021"><img src = "whitemail.png"></button>
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" id = "firstday" data-target="#2_1_2021"><img src = "whitemail.png"></button>
 
 
   <!-- Modal -->
@@ -743,5 +744,11 @@
 <div>
 <h1></h1>
 </div>
+
+<script>
+function positiondate() {
+		document.getElementbyId("firstday").id="firstfri";
+	}
+</script>
 </html>
 

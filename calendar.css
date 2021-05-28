@@ -46,7 +46,6 @@ img {
 .main {
   margin-top: 30px; /* Add a top margin to avoid content overlay */
 }
-
 button {
     border: none;
     cursor: pointer;
@@ -206,19 +205,54 @@ position:center;
   display: grid;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  grid-template-columns: auto auto auto auto auto auto auto;
+  grid-template-columns: repeat(7, 1fr);
   padding: 10px;
   left: 50%;
   border-radius: 25px;
 }
+#firstsun{
+  grid-column-start: 1;
+}
+
+#firstmon{
+  grid-column-start: 2;
+}
+
+#firsttues{
+  grid-column-start: 3;
+}
+
+#firstwed{	
+  grid-column-start: 4;
+}
+
+#firstthurs{
+  grid-column-start: 5;
+}
+
+#firstfri{
+  grid-column-start: 6;
+}
+
+#firstsat{
+  grid-column-start: 7;
+}
+
+.week {
+  display:grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-flow: dense;
+  grid-gap: 2px 10px;
+}
+.week-day, .day-label, .event {
+  padding: 4px 10px;
+  font-size: 20px;
+ color: #ffffff;
+ font-family:"Verdana";
+}
 .grid-item {
-  background-color: #DDD6F3;
-  padding: 20px;
   font-size: 30px;
-  text-align: center;
-  font-color: white;
   height: 50px;
-  border-radius: 10px;
 }
 
 .modal {
@@ -271,3 +305,12 @@ color: #b79dd0;
  font-family: "Verdana";
 
 }
+
+/*Days
+
+.monday {
+color: #0000000;
+position: absolute;
+top:500px;
+}
+
